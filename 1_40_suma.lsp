@@ -1,0 +1,17 @@
+(DEFUN addition_two (a b)
+	(+ a b)
+)
+
+(DEFUN addition_var (&rest nums)
+	(setq add 0)
+	(loop
+		(if (OR (EQUAL add nil) (EQUAL nums NIL) )
+			(return add)
+			(if (NUMBERP (car nums))
+				(setq add (+ add (car nums) ))
+				(setq add nil)
+			)
+		)
+		(setq nums (cdr nums))
+	)
+)

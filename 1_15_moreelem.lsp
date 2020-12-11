@@ -1,0 +1,6 @@
+(defun moreelem (e l)
+	(setq inic (LENGTH l))
+	(setq l (REMOVE e l))
+	(setq fin (LENGTH l))
+	(> (- inic fin) 1)
+)
